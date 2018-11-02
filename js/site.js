@@ -4771,15 +4771,15 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 	});
 var elm$core$Platform$Cmd$batch = _Platform_batch;
 var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
-var author$project$Main$init = _Utils_Tuple2(
+var author$project$Site$init = _Utils_Tuple2(
 	{},
 	elm$core$Platform$Cmd$none);
 var elm$core$Platform$Sub$batch = _Platform_batch;
 var elm$core$Platform$Sub$none = elm$core$Platform$Sub$batch(_List_Nil);
-var author$project$Main$subscriptions = function (_n0) {
+var author$project$Site$subscriptions = function (_n0) {
 	return elm$core$Platform$Sub$none;
 };
-var author$project$Main$update = F2(
+var author$project$Site$update = F2(
 	function (_n0, model) {
 		return _Utils_Tuple2(model, elm$core$Platform$Cmd$none);
 	});
@@ -4816,7 +4816,7 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			elm$json$Json$Encode$string(string));
 	});
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
-var author$project$Main$footer = A2(
+var author$project$Site$footer = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -4862,7 +4862,7 @@ var author$project$Main$footer = A2(
 var elm$html$Html$h1 = _VirtualDom_node('h1');
 var elm$html$Html$li = _VirtualDom_node('li');
 var elm$html$Html$ul = _VirtualDom_node('ul');
-var author$project$Main$header = A2(
+var author$project$Site$header = A2(
 	elm$html$Html$section,
 	_List_fromArray(
 		[
@@ -4905,10 +4905,10 @@ var author$project$Main$header = A2(
 						]))
 				]))
 		]));
-var author$project$Main$view = function (_n0) {
+var author$project$Site$view = function (_n0) {
 	return {
 		body: _List_fromArray(
-			[author$project$Main$header, author$project$Main$footer]),
+			[author$project$Site$header, author$project$Site$footer]),
 		title: 'Fifth Postulate'
 	};
 };
@@ -5208,14 +5208,14 @@ var elm$url$Url$fromString = function (str) {
 		A2(elm$core$String$dropLeft, 8, str)) : elm$core$Maybe$Nothing);
 };
 var elm$browser$Browser$document = _Browser_document;
-var author$project$Main$main = elm$browser$Browser$document(
+var author$project$Site$main = elm$browser$Browser$document(
 	{
 		init: function (_n0) {
-			return author$project$Main$init;
+			return author$project$Site$init;
 		},
-		subscriptions: author$project$Main$subscriptions,
-		update: author$project$Main$update,
-		view: author$project$Main$view
+		subscriptions: author$project$Site$subscriptions,
+		update: author$project$Site$update,
+		view: author$project$Site$view
 	});
-_Platform_export({'Main':{'init':author$project$Main$main(
+_Platform_export({'Site':{'init':author$project$Site$main(
 	elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));

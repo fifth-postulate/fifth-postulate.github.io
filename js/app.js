@@ -1,3 +1,3 @@
 (function(){
-    var app = Elm.Main.init({ node: document.getElementById('elm-container') });
+    var app = Elm.Site.init({ node: document.getElementById('elm-container') });
 })();
