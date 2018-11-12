@@ -4801,12 +4801,9 @@ var elm$virtual_dom$VirtualDom$toHandlerInt = function (handler) {
 			return 3;
 	}
 };
-var elm$html$Html$dd = _VirtualDom_node('dd');
-var elm$html$Html$dl = _VirtualDom_node('dl');
-var elm$html$Html$dt = _VirtualDom_node('dt');
+var elm$html$Html$div = _VirtualDom_node('div');
+var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$section = _VirtualDom_node('section');
-var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var elm$json$Json$Encode$string = _Json_wrap;
 var elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -4815,7 +4812,49 @@ var elm$html$Html$Attributes$stringProperty = F2(
 			key,
 			elm$json$Json$Encode$string(string));
 	});
+var elm$html$Html$Attributes$alt = elm$html$Html$Attributes$stringProperty('alt');
 var elm$html$Html$Attributes$class = elm$html$Html$Attributes$stringProperty('className');
+var elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var elm$html$Html$Attributes$width = function (n) {
+	return A2(
+		_VirtualDom_attribute,
+		'width',
+		elm$core$String$fromInt(n));
+};
+var author$project$Homepage$homepage = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$class('content')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$div,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$img,
+					_List_fromArray(
+						[
+							elm$html$Html$Attributes$src('/image/me.jpg'),
+							elm$html$Html$Attributes$alt('Daan van Berkel'),
+							elm$html$Html$Attributes$width(240)
+						]),
+					_List_Nil)
+				]))
+		]));
+var elm$html$Html$dd = _VirtualDom_node('dd');
+var elm$html$Html$dl = _VirtualDom_node('dl');
+var elm$html$Html$dt = _VirtualDom_node('dt');
+var elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var elm$html$Html$text = elm$virtual_dom$VirtualDom$text;
 var author$project$Site$footer = A2(
 	elm$html$Html$section,
 	_List_fromArray(
@@ -4908,7 +4947,7 @@ var author$project$Site$header = A2(
 var author$project$Site$view = function (_n0) {
 	return {
 		ak: _List_fromArray(
-			[author$project$Site$header, author$project$Site$footer]),
+			[author$project$Site$header, author$project$Homepage$homepage, author$project$Site$footer]),
 		ay: 'Fifth Postulate'
 	};
 };

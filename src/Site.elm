@@ -1,6 +1,7 @@
 module Site exposing (main)
 
 import Browser exposing (Document)
+import Homepage exposing (homepage)
 import Html exposing (Html)
 import Html.Attributes as Attribute
 
@@ -27,7 +28,7 @@ type alias Model =
 view : Model -> Document msg
 view _ =
     { title = "Fifth Postulate"
-    , body = [ header, footer ]
+    , body = [ header, homepage, footer ]
     }
 
 
