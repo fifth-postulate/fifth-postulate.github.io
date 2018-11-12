@@ -15,4 +15,8 @@ homepage =
                 ]
                 []
             ]
+        , Html.p [] [ Html.text "In Euclidean geometry, the fifth postulate is a distinctive axiom."]
+        , Html.p [] [ Html.text "For long times, mathematicians sought to proof the fifth postulate assuming the four that precedes it."]
+        , Html.p [] [ Html.text "This was futile, for centuries later other geometries were discovered, geometries in which the fifth-postulate is false."]
+        , Html.p [] [ Html.text "Daan van Berkel, and his company Fifth Postulate, offer you the same insight. Detecting hidden assumptions that hamper growth and offering changes for improvement"]
         ]
