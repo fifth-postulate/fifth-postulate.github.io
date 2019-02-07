@@ -4864,21 +4864,21 @@ var author$project$Homepage$homepage = A2(
 			_List_Nil,
 			_List_fromArray(
 				[
-					elm$html$Html$text('For long times, mathematicians sought to proof the fifth postulate assuming the four that precedes it.')
+					elm$html$Html$text('For long times, mathematicians sought to prove the fifth postulate assuming the four that precede it.')
 				])),
 			A2(
 			elm$html$Html$p,
 			_List_Nil,
 			_List_fromArray(
 				[
-					elm$html$Html$text('This was futile, for centuries later other geometries were discovered, geometries in which the fifth-postulate is false.')
+					elm$html$Html$text('This was futile, for centuries later other geometries were discovered, geometries in which the fifth postulate is false.')
 				])),
 			A2(
 			elm$html$Html$p,
 			_List_Nil,
 			_List_fromArray(
 				[
-					elm$html$Html$text('Daan van Berkel, and his company Fifth Postulate, offer you the same insight. Detecting hidden assumptions that hamper growth and offering changes for improvement')
+					elm$html$Html$text('Daan van Berkel, and his company Fifth Postulate, offer you the same insight. Detecting hidden assumptions that hamper growth and offering changes for improvement.')
 				]))
 		]));
 var elm$html$Html$dd = _VirtualDom_node('dd');
