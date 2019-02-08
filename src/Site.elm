@@ -1,28 +1,32 @@
 module Site exposing (main)
 
 import Browser exposing (Document)
+import Browser.Navigation exposing (Key)
 import Homepage exposing (homepage)
 import Html exposing (Html)
 import Html.Attributes as Attribute
+import Url exposing (Url)
 
 
-main: Program () Model msg
+main : Program () Model Message
 main =
-    Browser.document
-        { init = \_ -> init
+    Browser.application
+        { init = init
         , view = view
         , update = update
         , subscriptions = subscriptions
+        , onUrlRequest = \_ -> DoNothing
+        , onUrlChange = \_ -> DoNothing
         }
 
 
-init : (Model, Cmd msg)
-init =
-    ({}, Cmd.none)
+init : flags -> Url -> Key -> ( Model, Cmd msg )
+init _ _ key =
+    ( { key = key }, Cmd.none )
 
 
 type alias Model =
-    {}
+    { key : Key }
 
 
 view : Model -> Document msg
@@ -55,11 +59,15 @@ footer =
             ]
         ]
 
-update : msg -> Model -> (Model, Cmd msg)
+
+type Message =
+    DoNothing
+
+update : msg -> Model -> ( Model, Cmd msg )
 update _ model =
-    (model, Cmd.none)
+    ( model, Cmd.none )
 
 
-subscriptions: Model -> Sub msg
+subscriptions : Model -> Sub msg
 subscriptions _ =
     Sub.none

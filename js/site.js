@@ -4294,6 +4294,7 @@ function _Browser_load(url)
 		}
 	}));
 }
+var author$project$Site$DoNothing = 0;
 var elm$core$Basics$False = 1;
 var elm$core$Basics$True = 0;
 var elm$core$Result$isOk = function (result) {
@@ -4771,9 +4772,12 @@ var elm$json$Json$Decode$errorToStringHelp = F2(
 	});
 var elm$core$Platform$Cmd$batch = _Platform_batch;
 var elm$core$Platform$Cmd$none = elm$core$Platform$Cmd$batch(_List_Nil);
-var author$project$Site$init = _Utils_Tuple2(
-	{},
-	elm$core$Platform$Cmd$none);
+var author$project$Site$init = F3(
+	function (_n0, _n1, key) {
+		return _Utils_Tuple2(
+			{T: key},
+			elm$core$Platform$Cmd$none);
+	});
 var elm$core$Platform$Sub$batch = _Platform_batch;
 var elm$core$Platform$Sub$none = elm$core$Platform$Sub$batch(_List_Nil);
 var author$project$Site$subscriptions = function (_n0) {
@@ -5269,11 +5273,15 @@ var elm$url$Url$fromString = function (str) {
 		1,
 		A2(elm$core$String$dropLeft, 8, str)) : elm$core$Maybe$Nothing);
 };
-var elm$browser$Browser$document = _Browser_document;
-var author$project$Site$main = elm$browser$Browser$document(
+var elm$browser$Browser$application = _Browser_application;
+var author$project$Site$main = elm$browser$Browser$application(
 	{
-		ar: function (_n0) {
-			return author$project$Site$init;
+		ar: author$project$Site$init,
+		at: function (_n0) {
+			return 0;
+		},
+		au: function (_n1) {
+			return 0;
 		},
 		ax: author$project$Site$subscriptions,
 		az: author$project$Site$update,
